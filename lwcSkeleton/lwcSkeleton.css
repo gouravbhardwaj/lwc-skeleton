@@ -1,0 +1,75 @@
+.skeleton-wrapper {
+    width: 100%;
+}
+
+.skeleton-line,
+.skeleton-avatar,
+.skeleton-table-cell,
+.skeleton-rectangle {
+    background: linear-gradient(
+        90deg,
+        #f3f3f3 25%,
+        #e0e0e0 37%,
+        #f3f3f3 63%
+    );
+    background-size: 400% 100%;
+    animation: shimmer 1.4s ease infinite;
+    border-radius: 4px;
+}
+
+/* TEXT */
+.skeleton-line {
+    height: 14px;
+    margin-bottom: 10px;
+}
+
+.skeleton-line.small {
+    height: 10px;
+    width: 60%;
+}
+
+/* AVATAR */
+.skeleton-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+/* CARD */
+.skeleton-card {
+    display: flex;
+    gap: 12px;
+    padding: 12px;
+    border: 1px solid #dddbda;
+    border-radius: 6px;
+}
+
+.skeleton-card-body {
+    flex: 1;
+}
+
+/* TABLE */
+.skeleton-table-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.skeleton-table-cell {
+    flex: 1;
+    height: 14px;
+}
+
+/* RECTANGLE */
+.skeleton-rectangle {
+    border-radius: 6px;
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -400px 0;
+    }
+    100% {
+        background-position: 400px 0;
+    }
+}

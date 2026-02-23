@@ -1,0 +1,46 @@
+<template>
+    <div class="skeleton-wrapper">
+
+        <!-- TEXT -->
+        <template if:true={isText}>
+            <template for:each={linesArray} for:item="item">
+                <div key={item} class={computedTextClass}></div>
+            </template>
+        </template>
+
+        <!-- AVATAR -->
+        <template if:true={isAvatar}>
+            <div class="skeleton-avatar"></div>
+        </template>
+
+        <!-- CARD -->
+        <template if:true={isCard}>
+            <div class="skeleton-card">
+                <div class="skeleton-avatar"></div>
+                <div class="skeleton-card-body">
+                    <div class="skeleton-line"></div>
+                    <div class="skeleton-line small"></div>
+                </div>
+            </div>
+        </template>
+
+        <!-- TABLE -->
+        <template if:true={isTable}>
+            <div class="skeleton-table">
+                <template for:each={rowsArray} for:item="row">
+                    <div key={row} class="skeleton-table-row">
+                        <template for:each={columnsArray} for:item="col">
+                            <div key={col} class="skeleton-table-cell"></div>
+                        </template>
+                    </div>
+                </template>
+            </div>
+        </template>
+
+        <!-- RECTANGLE -->
+        <template if:true={isRectangle}>
+            <div class="skeleton-rectangle" style={rectangleStyle}></div>
+        </template>
+
+    </div>
+</template>
