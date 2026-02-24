@@ -8,6 +8,8 @@ This component provides structured loading placeholders instead of
 spinners, improving perceived performance and delivering a modern
 Salesforce UX experience.
 
+Visit - https://lwc-skeleton-landing.vercel.app/
+
 ------------------------------------------------------------------------
 
 ## Why Use Skeleton Loaders?
